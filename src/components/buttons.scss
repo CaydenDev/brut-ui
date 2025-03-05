@@ -1,0 +1,93 @@
+// BRUT-UI Button Component
+// Raw, unrefined button styles reflecting Brutalist design principles
+
+.btn {
+  display: inline-block;
+  padding: $spacing-3 $spacing-6;
+  font-family: $font-family-base;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 3px solid $color-black;
+  background-color: $color-white;
+  color: $color-black;
+  text-transform: uppercase;
+  transition: transform 0.2s, box-shadow 0.2s;
+  
+  &:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 $color-black;
+  }
+  
+  &:active {
+    transform: translate(0, 0);
+    box-shadow: none;
+  }
+}
+
+.btn-sm {
+  padding: $spacing-2 $spacing-4;
+  font-size: $font-size-sm;
+}
+
+.btn-lg {
+  padding: $spacing-4 $spacing-8;
+  font-size: $font-size-lg;
+}
+
+.btn-primary {
+  background-color: $color-black;
+  color: $color-white;
+  
+  &:hover {
+    box-shadow: 4px 4px 0 $color-accent-blue;
+  }
+}
+
+.btn-accent-red {
+  background-color: $color-accent-red;
+  border-color: $color-black;
+  color: $color-white;
+  
+  &:hover {
+    box-shadow: 4px 4px 0 $color-black;
+  }
+}
+
+.btn-accent-blue {
+  background-color: $color-accent-blue;
+  border-color: $color-black;
+  color: $color-white;
+  
+  &:hover {
+    box-shadow: 4px 4px 0 $color-black;
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  
+  &:hover {
+    background-color: $color-black;
+    color: $color-white;
+  }
+}
+
+.btn-disabled,
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn-group {
+  display: inline-flex;
+  gap: $spacing-2;
+  
+  .btn {
+    &:not(:first-child) {
+      margin-left: -3px;
+    }
+  }
+}

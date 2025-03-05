@@ -1,0 +1,107 @@
+// BRUT-UI Table Component
+// Raw, unrefined table styles reflecting Brutalist design principles
+
+.table {
+  width: 100%;
+  margin-bottom: $spacing-4;
+  border-collapse: collapse;
+  border: 3px solid $color-black;
+  
+  th,
+  td {
+    padding: $spacing-3 $spacing-4;
+    text-align: left;
+    vertical-align: top;
+    border: 3px solid $color-black;
+  }
+  
+  thead th {
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    background-color: $color-black;
+    color: $color-white;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: $color-concrete;
+  }
+}
+
+.table-bordered {
+  th,
+  td {
+    border: 3px solid $color-black;
+  }
+}
+
+.table-borderless {
+  th,
+  td,
+  thead th,
+  tbody + tbody {
+    border: 0;
+  }
+}
+
+.table-shadow {
+  box-shadow: 8px 8px 0 $color-black;
+}
+
+.table-accent-red {
+  border-color: $color-accent-red;
+  
+  th,
+  td {
+    border-color: $color-accent-red;
+  }
+  
+  thead th {
+    background-color: $color-accent-red;
+  }
+  
+  &.table-shadow {
+    box-shadow: 8px 8px 0 $color-accent-red;
+  }
+}
+
+.table-accent-blue {
+  border-color: $color-accent-blue;
+  
+  th,
+  td {
+    border-color: $color-accent-blue;
+  }
+  
+  thead th {
+    background-color: $color-accent-blue;
+  }
+  
+  &.table-shadow {
+    box-shadow: 8px 8px 0 $color-accent-blue;
+  }
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  
+  > .table {
+    margin-bottom: 0;
+  }
+}
+
+.table-sm {
+  th,
+  td {
+    padding: $spacing-2 $spacing-3;
+  }
+}
+
+.table-lg {
+  th,
+  td {
+    padding: $spacing-4 $spacing-6;
+  }
+}

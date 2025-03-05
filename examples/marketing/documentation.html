@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation - BRUT-UI</title>
+  <link rel="stylesheet" href="../../dist/brut-ui.min.css">
+</head>
+<body class="doc-container">
+  <nav class="nav nav-shadow">
+    <div class="nav-item">
+      <a href="index.html" class="nav-link">Home</a>
+    </div>
+    <div class="nav-item">
+      <a href="documentation.html" class="nav-link active">Documentation</a>
+    </div>
+    <div class="nav-item">
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <header class="doc-section">
+    <h1 class="doc-heading">BRUT-UI Documentation</h1>
+    <p class="mb-6">Everything you need to know about using the BRUT-UI framework.</p>
+  </header>
+
+  <div class="grid grid-cols-4 gap-4">
+    <div class="col-span-1">
+      <div class="card mb-4">
+        <div class="card-header">
+          <h3>Navigation</h3>
+        </div>
+        <div class="card-body p-0">
+          <nav class="doc-nav">
+            <div class="nav-item">
+              <a href="#getting-started" class="nav-link">Getting Started</a>
+            </div>
+            <div class="nav-item">
+              <a href="#design-principles" class="nav-link">Design Principles</a>
+            </div>
+            <div class="nav-item">
+              <a href="#design-system" class="nav-link">Design System</a>
+            </div>
+            <div class="nav-item">
+              <a href="#components" class="nav-link">Components</a>
+            </div>
+            <div class="nav-item">
+              <a href="#utilities" class="nav-link">Utilities</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-span-3">
+      <section id="getting-started" class="doc-section">
+        <h2 class="doc-heading">Getting Started</h2>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="mb-4">Installation</h3>
+            <p class="mb-4">There are several ways to include BRUT-UI in your project:</p>
+            
+            <h4 class="mb-2">Direct Download</h4>
+            <pre class="doc-code"><code>&lt;link rel="stylesheet" href="path/to/brut-ui.min.css"&gt;</code></pre>
+            
+            <h4 class="mb-2">NPM</h4>
+            <pre class="doc-code"><code>npm install brut-ui</code></pre>
+            
+            <h4 class="mb-2">CDN</h4>
+            <pre class="doc-code"><code>&lt;link rel="stylesheet" href="https://cdn.example.com/brut-ui@0.1.0/dist/brut-ui.min.css"&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="design-principles" class="doc-section">
+        <h2 class="doc-heading">Design Principles</h2>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="mb-4">Brutalism in Web Design</h3>
+            <p class="mb-4">BRUT-UI is inspired by the Brutalist architectural movement, characterized by:</p>
+            <ul class="mb-6">
+              <li class="mb-2">Raw, unrefined aesthetics</li>
+              <li class="mb-2">Honest presentation of materials</li>
+              <li class="mb-2">Functional minimalism</li>
+              <li class="mb-2">Bold, distinctive visual elements</li>
+            </ul>
+
+            <h3 class="mb-4">Core Principles</h3>
+            <ul>
+              <li class="mb-2"><strong>Rawness and Honesty</strong>: Exposing the nature of web elements</li>
+              <li class="mb-2"><strong>Bold Contrasts</strong>: Strong visual hierarchy</li>
+              <li class="mb-2"><strong>Functional Minimalism</strong>: Removing unnecessary decoration</li>
+              <li class="mb-2"><strong>Performance-Focused</strong>: Lightweight with minimal overhead</li>
+              <li class="mb-2"><strong>Accessible Design</strong>: High contrast and semantic structure</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="design-system" class="doc-section">
+        <h2 class="doc-heading">Design System</h2>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="mb-4">Typography</h3>
+            <p class="mb-4">Our typography system uses:</p>
+            <ul class="mb-6">
+              <li class="mb-2">Primary Font: Inter - Clean, legible sans-serif</li>
+              <li class="mb-2">Monospace: JetBrains Mono - For code and technical content</li>
+              <li class="mb-2">Limited font weights for clarity</li>
+              <li class="mb-2">Consistent line heights for readability</li>
+            </ul>
+
+            <h3 class="mb-4">Colors</h3>
+            <p class="mb-4">Our intentionally minimalist color system includes:</p>
+            <ul class="mb-6">
+              <li class="mb-2">Monochromatic scale for primary usage</li>
+              <li class="mb-2">Accent colors used sparingly</li>
+              <li class="mb-2">High contrast for accessibility</li>
+            </ul>
+
+            <h3 class="mb-4">Spacing</h3>
+            <p class="mb-4">Built on a base unit of 4px (0.25rem) for consistency</p>
+            <pre class="doc-code"><code>--brut-space-1: 0.25rem  /* 4px */
+--brut-space-2: 0.5rem   /* 8px */
+--brut-space-4: 1rem     /* 16px */
+--brut-space-8: 2rem     /* 32px */</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="components" class="doc-section">
+        <h2 class="doc-heading">Components</h2>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="card">
+            <div class="card-header">
+              <h3>Buttons</h3>
+            </div>
+            <div class="card-body">
+              <p class="mb-4">Various button styles:</p>
+              <button class="btn btn-primary mb-2 mr-2">Primary</button>
+              <button class="btn btn-outline mb-2 mr-2">Outline</button>
+              <button class="btn btn-sm mb-2">Small</button>
+              <pre class="doc-code mt-4"><code>&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;</code></pre>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3>Cards</h3>
+            </div>
+            <div class="card-body">
+              <p class="mb-4">Content containers with header, body, and footer:</p>
+              <pre class="doc-code"><code>&lt;div class="card"&gt;
+  &lt;div class="card-header"&gt;Title&lt;/div&gt;
+  &lt;div class="card-body"&gt;Content&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3>Navigation</h3>
+            </div>
+            <div class="card-body">
+              <p class="mb-4">Navigation components:</p>
+              <pre class="doc-code"><code>&lt;nav class="nav nav-shadow"&gt;
+  &lt;div class="nav-item"&gt;
+    &lt;a class="nav-link"&gt;Link&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3>Forms</h3>
+            </div>
+            <div class="card-body">
+              <p class="mb-4">Form elements with brutalist styling:</p>
+              <pre class="doc-code"><code>&lt;div class="form-group"&gt;
+  &lt;label&gt;Label&lt;/label&gt;
+  &lt;input class="form-input"&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="utilities" class="doc-section">
+        <h2 class="doc-heading">Utilities</h2>
+        <div class="card">
+          <div class="card-body">
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <h3 class="mb-4">Spacing</h3>
+                <p class="mb-2">Margin and padding utilities:</p>
+                <ul class="mb-4">
+                  <li><code class="doc-code-inline">m-{size}</code> - Margin</li>
+                  <li><code class="doc-code-inline">p-{size}</code> - Padding</li>
+                  <li><code class="doc-code-inline">mx-{size}</code> - Margin x-axis</li>
+                  <li><code class="doc-code-inline">py-{size}</code> - Padding y-axis</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 class="mb-4">Layout</h3>
+                <p class="mb-2">Layout utilities:</p>
+                <ul class="mb-4">
+                  <li><code class="doc-code-inline">container</code> - Container</li>
+                  <li><code class="doc-code-inline">grid</code> - Grid layout</li>
+                  <li><code class="doc-code-inline">flex</code> - Flexbox</li>
+                  <li><code class="doc-code-inline">hidden</code> - Hide element</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="container mx-auto p-4 mt-8">
+    <p>&copy; 2025 CaydenDev. All rights reserved.</p>
+  </footer>
+</body>
+</html>

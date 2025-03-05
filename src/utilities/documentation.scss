@@ -1,0 +1,201 @@
+// BRUT-UI Documentation Utilities
+// Utility classes for documentation pages
+
+.doc-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-4;
+  
+  @media (min-width: $breakpoint-md) {
+    padding: $spacing-6;
+  }
+}
+
+.doc-section {
+  margin-bottom: $spacing-10;
+  border-bottom: $border-width-default solid $color-concrete-dark;
+  padding-bottom: $spacing-8;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.doc-heading {
+  font-family: $font-family-monospace;
+  margin-bottom: $spacing-4;
+  padding-bottom: $spacing-2;
+  border-bottom: $border-width-default solid $color-concrete-dark;
+}
+
+.doc-code {
+  font-family: $font-family-monospace;
+  background-color: $color-concrete;
+  border: $border-width-default solid $color-concrete-dark;
+  padding: $spacing-4;
+  margin: $spacing-4 0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  font-size: $font-size-sm;
+  line-height: $line-height-normal;
+}
+
+.doc-code-inline {
+  font-family: $font-family-monospace;
+  background-color: $color-concrete;
+  padding: $spacing-1 $spacing-2;
+  border: 1px solid $color-concrete-dark;
+  border-radius: $border-radius-sm;
+  font-size: 0.9em;
+}
+
+.doc-nav {
+  position: sticky;
+  top: $spacing-4;
+  max-height: calc(100vh - #{$spacing-8});
+  overflow-y: auto;
+  
+  .nav-item {
+    margin-bottom: $spacing-1;
+  }
+  
+  .nav-link {
+    display: block;
+    padding: $spacing-2;
+    border-left: $border-width-default solid transparent;
+    
+    &:hover {
+      border-left-color: $color-concrete-dark;
+    }
+    
+    &.active {
+      border-left-color: $color-accent-blue;
+      font-weight: $font-weight-bold;
+    }
+  }
+  
+  .nav-section {
+    margin-top: $spacing-4;
+    margin-bottom: $spacing-2;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    font-size: $font-size-sm;
+    color: $color-steel;
+  }
+}
+
+.doc-example {
+  border: $border-width-default solid $color-concrete-dark;
+  margin: $spacing-4 0;
+  
+  .doc-example-preview {
+    padding: $spacing-4;
+    border-bottom: $border-width-default solid $color-concrete-dark;
+  }
+  
+  .doc-example-code {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: $spacing-4 0;
+  
+  th, td {
+    border: $border-width-default solid $color-concrete-dark;
+    padding: $spacing-3;
+    text-align: left;
+  }
+  
+  th {
+    background-color: $color-concrete;
+    font-weight: $font-weight-bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: $color-concrete;
+  }
+}
+
+.doc-props {
+  dt {
+    font-family: $font-family-monospace;
+    font-weight: $font-weight-bold;
+    margin-top: $spacing-4;
+  }
+  
+  dd {
+    margin-left: $spacing-4;
+    margin-bottom: $spacing-3;
+  }
+}
+
+.doc-callout {
+  padding: $spacing-4;
+  margin: $spacing-4 0;
+  border-left: $border-width-thick solid;
+  background-color: $color-concrete;
+  
+  &.doc-callout-info {
+    border-left-color: $color-info;
+  }
+  
+  &.doc-callout-warning {
+    border-left-color: $color-warning;
+  }
+  
+  &.doc-callout-danger {
+    border-left-color: $color-danger;
+  }
+  
+  .doc-callout-title {
+    margin-top: 0;
+    margin-bottom: $spacing-2;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.doc-kbd {
+  display: inline-block;
+  padding: $spacing-1 $spacing-2;
+  font-family: $font-family-monospace;
+  font-size: $font-size-sm;
+  color: $color-charcoal;
+  background-color: $color-concrete;
+  border: $border-width-default solid $color-concrete-dark;
+  border-radius: $border-radius-sm;
+  box-shadow: 0 2px 0 $color-concrete-dark;
+}
+
+.doc-version {
+  display: inline-block;
+  padding: $spacing-1 $spacing-2;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+  color: $color-white;
+  background-color: $color-accent-blue;
+  border-radius: $border-radius-sm;
+  vertical-align: middle;
+  margin-left: $spacing-2;
+}
+
+.doc-index {
+  background-color: $color-concrete;
+  padding: $spacing-4;
+  margin: $spacing-4 0;
+  border: $border-width-default solid $color-concrete-dark;
+  
+  ul {
+    list-style-type: none;
+    padding-left: $spacing-4;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: $spacing-2;
+  }
+}

@@ -1,0 +1,186 @@
+// BRUT-UI Modal Component
+// Raw, unrefined modal styles reflecting Brutalist design principles
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color-black, 0.75);
+  z-index: 1040;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  padding: $spacing-4;
+  overflow-x: hidden;
+  overflow-y: auto;
+  
+  &.modal-hidden {
+    display: none;
+  }
+}
+
+.modal-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: $spacing-4 auto;
+  background-color: $color-white;
+  border: 3px solid $color-black;
+  
+  &.modal-shadow {
+    box-shadow: 8px 8px 0 $color-black;
+  }
+  
+  &.modal-sm {
+    max-width: 300px;
+  }
+  
+  &.modal-lg {
+    max-width: 800px;
+  }
+  
+  &.modal-xl {
+    max-width: 1140px;
+  }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-4;
+  border-bottom: 3px solid $color-black;
+  background-color: $color-concrete;
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+  padding: $spacing-1 $spacing-2;
+  margin: -$spacing-1 -$spacing-2;
+  
+  &:hover {
+    background-color: $color-black;
+    color: $color-white;
+  }
+}
+
+.modal-body {
+  padding: $spacing-4;
+}
+
+.modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding: $spacing-4;
+  border-top: 3px solid $color-black;
+  background-color: $color-concrete;
+  gap: $spacing-2;
+}
+
+.modal-primary {
+  .modal-dialog {
+    border-color: $color-black;
+  }
+  
+  .modal-header {
+    background-color: $color-black;
+    color: $color-white;
+    border-bottom-color: $color-white;
+  }
+  
+  .modal-footer {
+    background-color: $color-black;
+    color: $color-white;
+    border-top-color: $color-white;
+  }
+  
+  .modal-close {
+    color: $color-white;
+    
+    &:hover {
+      background-color: $color-white;
+      color: $color-black;
+    }
+  }
+}
+
+.modal-accent-red {
+  .modal-dialog {
+    border-color: $color-accent-red;
+    
+    &.modal-shadow {
+      box-shadow: 8px 8px 0 $color-accent-red;
+    }
+  }
+  
+  .modal-header {
+    background-color: $color-accent-red;
+    color: $color-white;
+    border-bottom-color: $color-black;
+  }
+  
+  .modal-footer {
+    background-color: $color-accent-red;
+    color: $color-white;
+    border-top-color: $color-black;
+  }
+}
+
+.modal-accent-blue {
+  .modal-dialog {
+    border-color: $color-accent-blue;
+    
+    &.modal-shadow {
+      box-shadow: 8px 8px 0 $color-accent-blue;
+    }
+  }
+  
+  .modal-header {
+    background-color: $color-accent-blue;
+    color: $color-white;
+    border-bottom-color: $color-black;
+  }
+  
+  .modal-footer {
+    background-color: $color-accent-blue;
+    color: $color-white;
+    border-top-color: $color-black;
+  }
+}
+
+.modal-fade {
+  .modal-dialog {
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+  
+  &.modal-show .modal-dialog {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

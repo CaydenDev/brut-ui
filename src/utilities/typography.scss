@@ -1,0 +1,194 @@
+// BRUT-UI Typography Utilities
+// Brutalist-inspired typography utility classes
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.font-weight-normal {
+  font-weight: $font-weight-normal !important;
+}
+
+.font-weight-medium {
+  font-weight: $font-weight-medium !important;
+}
+
+.font-weight-bold {
+  font-weight: $font-weight-bold !important;
+}
+
+.font-weight-black {
+  font-weight: $font-weight-black !important;
+}
+
+.font-italic {
+  font-style: italic !important;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.text-decoration-underline {
+  text-decoration: underline !important;
+}
+
+.text-decoration-line-through {
+  text-decoration: line-through !important;
+}
+
+.font-family-base {
+  font-family: $font-family-base !important;
+}
+
+.font-family-heading {
+  font-family: $font-family-heading !important;
+}
+
+.font-family-monospace {
+  font-family: $font-family-monospace !important;
+}
+
+.font-size-xs {
+  font-size: $font-size-xs !important;
+}
+
+.font-size-sm {
+  font-size: $font-size-sm !important;
+}
+
+.font-size-base {
+  font-size: $font-size-base !important;
+}
+
+.font-size-lg {
+  font-size: $font-size-lg !important;
+}
+
+.font-size-xl {
+  font-size: $font-size-xl !important;
+}
+
+.font-size-2xl {
+  font-size: $font-size-2xl !important;
+}
+
+.font-size-3xl {
+  font-size: $font-size-3xl !important;
+}
+
+.font-size-4xl {
+  font-size: $font-size-4xl !important;
+}
+
+.font-size-5xl {
+  font-size: $font-size-5xl !important;
+}
+
+.line-height-tight {
+  line-height: $line-height-tight !important;
+}
+
+.line-height-snug {
+  line-height: $line-height-snug !important;
+}
+
+.line-height-normal {
+  line-height: $line-height-normal !important;
+}
+
+.line-height-relaxed {
+  line-height: $line-height-relaxed !important;
+}
+
+.text-shadow-brutal {
+  text-shadow: 3px 3px 0 $color-black !important;
+}
+
+.text-shadow-brutal-red {
+  text-shadow: 3px 3px 0 $color-accent-red !important;
+}
+
+.text-shadow-brutal-blue {
+  text-shadow: 3px 3px 0 $color-accent-blue !important;
+}
+
+.text-shadow-brutal-yellow {
+  text-shadow: 3px 3px 0 $color-accent-yellow !important;
+}
+
+.text-black {
+  color: $color-black !important;
+}
+
+.text-white {
+  color: $color-white !important;
+}
+
+.text-concrete {
+  color: $color-concrete !important;
+}
+
+.text-steel {
+  color: $color-steel !important;
+}
+
+.text-charcoal {
+  color: $color-charcoal !important;
+}
+
+.text-accent-red {
+  color: $color-accent-red !important;
+}
+
+.text-accent-blue {
+  color: $color-accent-blue !important;
+}
+
+.text-accent-yellow {
+  color: $color-accent-yellow !important;
+}
+
+@each $breakpoint, $width in $breakpoints {
+  @include breakpoint-up($breakpoint) {
+    .text-#{$breakpoint}-left {
+      text-align: left !important;
+    }
+    
+    .text-#{$breakpoint}-center {
+      text-align: center !important;
+    }
+    
+    .text-#{$breakpoint}-right {
+      text-align: right !important;
+    }
+    
+    .text-#{$breakpoint}-justify {
+      text-align: justify !important;
+    }
+  }
+}

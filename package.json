@@ -1,0 +1,28 @@
+{
+  "name": "brut-ui",
+  "version": "0.1.0",
+  "description": "A Brutalism-inspired CSS framework that emphasizes raw, unrefined aesthetics while ensuring high performance, usability, and modularity. github.com/caydendev",
+  "main": "dist/brut-ui.css",
+  "scripts": {
+    "dev": "sass --watch src/index.scss:dist/brut-ui.css",
+    "build": "sass src/index.scss:dist/brut-ui.css --style compressed && postcss dist/brut-ui.css -o dist/brut-ui.min.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "brutalism",
+    "design",
+    "ui",
+    "utility-first"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.63.6"
+  }
+}

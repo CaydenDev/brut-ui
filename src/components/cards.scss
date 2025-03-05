@@ -1,0 +1,119 @@
+// BRUT-UI Card Component
+// Raw, unrefined card styles reflecting Brutalist design principles
+
+.card {
+  display: block;
+  border: 3px solid $color-black;
+  background-color: $color-white;
+  margin-bottom: $spacing-4;
+  
+  &.card-shadow {
+    box-shadow: 6px 6px 0 $color-black;
+  }
+  
+  &.card-offset {
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      width: 100%;
+      height: 100%;
+      background-color: $color-black;
+      z-index: -1;
+    }
+  }
+}
+
+.card-header {
+  padding: $spacing-4;
+  border-bottom: 3px solid $color-black;
+  background-color: $color-concrete;
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.card-body {
+  padding: $spacing-4;
+}
+
+.card-footer {
+  padding: $spacing-4;
+  border-top: 3px solid $color-black;
+  background-color: $color-concrete;
+}
+
+.card-img {
+  width: 100%;
+  display: block;
+  
+  &.card-img-top {
+    border-bottom: 3px solid $color-black;
+  }
+  
+  &.card-img-bottom {
+    border-top: 3px solid $color-black;
+  }
+}
+
+.card-primary {
+  background-color: $color-black;
+  color: $color-white;
+  
+  .card-header,
+  .card-footer {
+    background-color: darken($color-black, 10%);
+    border-color: $color-white;
+  }
+}
+
+.card-accent-red {
+  border-color: $color-accent-red;
+  
+  .card-header,
+  .card-footer {
+    background-color: $color-accent-red;
+    border-color: $color-black;
+    color: $color-white;
+  }
+  
+  &.card-shadow {
+    box-shadow: 6px 6px 0 $color-accent-red;
+  }
+}
+
+.card-accent-blue {
+  border-color: $color-accent-blue;
+  
+  .card-header,
+  .card-footer {
+    background-color: $color-accent-blue;
+    border-color: $color-black;
+    color: $color-white;
+  }
+  
+  &.card-shadow {
+    box-shadow: 6px 6px 0 $color-accent-blue;
+  }
+}
+
+.card-group {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-4;
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+    
+    .card {
+      flex: 1;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+// BRUT-UI - A Brutalism-inspired CSS framework
+
+// Base styles
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/typography';
+
+// Utilities
+@import 'utilities/spacing';
+@import 'utilities/colors';
+@import 'utilities/responsive';
+@import 'utilities/layout';
+@import 'utilities/typography';
+@import 'utilities/documentation';
+
+// Components
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/cards';
+@import 'components/modals';
+@import 'components/navigation';
+@import 'components/tables';
